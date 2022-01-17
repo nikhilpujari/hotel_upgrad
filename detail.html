@@ -2,10 +2,14 @@
     <head><title>
         Detail
     </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
             width: 100%;
-            height: 100%;
+            min-height: 100vh;
+            position: relative;
+            background-color: #e0e0e0;
+            margin: 0;
         }
          #logo{
             width: 60px;
@@ -14,22 +18,29 @@
         #img_detail{
             width: 500px;
             height: 500px;
+            padding: 2% 4% 0% 4%;
         }
         #social{
             width: 22px;
             height: 20px;
         }
+        #footer{
+            background-color: rosybrown; 
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <div>
-        <header>
+        <header style="background-color: rosybrown;">
             <a href="index.html"><img src="assests/images/logo.png" id="logo" alt="logo"/></a>
             <a href="login.html">LOGIN</a>
         </header>
-        <div>
+        <div style="padding-bottom: 3.5rem;">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="img_detail" alt="radison"/></a>
-            <form action="payment.html" method="get">
+            <form action="payment.html" method="get" style="padding: 0% 4% 1% 4%;">
                 Adults:
                 <input type="number" name="adults" min="1" autocomplete="off" required><br>
                 Name:
@@ -42,21 +53,23 @@
                 <input type="number" name="total" disabled><br>
                 <input type="submit" value="Book Now">
             </form>
-            <h2>Radisson Blu Hotel</h2>
-            RATING<br><br>
-            5 Star<br><br>
-            AMENITIES
-            <ul>
-                <li>Room service</li>
-                <li>Resturant</li>
-                <li>Business center</li>
-                <li>Fitness center</li>
-                <li>Pool</li>
-            </ul>
-            <h5>DESCRIPTION</h5>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+            <div style="padding: 1% 4% 2% 4%;">
+                <h2>Radisson Blu Hotel</h2>
+                RATING<br><br>
+                5 Star<br><br>
+                AMENITIES
+                <ul>
+                    <li>Room service</li>
+                    <li>Resturant</li>
+                    <li>Business center</li>
+                    <li>Fitness center</li>
+                    <li>Pool</li>
+                </ul>
+                <h5>DESCRIPTION</h5>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+            </div>
         </div>
-        <footer>
+        <footer id="footer">
             <a href="contact.html">Contact Us</a><br>
             <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
             <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
