@@ -3,6 +3,7 @@
         Index
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <style>
         body{
             width: 100%;
@@ -10,10 +11,35 @@
             position: relative;
             background-color: #e0e0e0;
             margin: 0;
+            font-family: 'Ubuntu', sans-serif;
         }
         #logo{
             width: 60px;
             height: 60px;
+            left:0;
+            margin:0 auto;
+            top: 0;
+            bottom: 0;
+        }
+        #login{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            margin:0 auto;
+            text-decoration:none;
+            color: black;
+        }
+        #search{
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            padding: 10px;
+            width: 30%;
+            background-color: #f1f1f1;
+            transform: translate(-50%, -50%);
         }
         #city{
             width: 150px;
@@ -27,22 +53,28 @@
         }
         #footer{
             background-color: rosybrown; 
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            
+        }
+        #copywrite{
+            font-size: 10px; 
+            display: block;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div style="width: 100%;">
-        <header style="background-color: rosybrown;">
+        <header style="background-color: rosybrown; position: fixed; width: 100%; top:0; z-index:1;">
             <img src="assests/images/logo.png" id="logo" alt="logo"/>
-            <a href="login.html">LOGIN</a>
+            <a href="login.html" id="login">LOGIN</a>
         </header>
        
-        <div>
-            <div style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg'); width:100%; background-repeat: no-repeat; background-size:cover; background-position: center; height: 380px;">
-                <input type="text" name="city" placeholder="City"><br>
+        <div style="padding-bottom: 3.5rem;">
+            <div style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg'); width:100%; background-repeat: no-repeat; background-size:cover; background-position: center; height: 380px; position: relative;">
+                <input type="text" name="city" id="search" placeholder="City"><br>
             </div>
             <div style="margin-left: 15%; margin-right: 15%;">
                 <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" id="city" alt="delhi"/></a>
@@ -51,15 +83,17 @@
                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" id="city"  alt="calcutta"/>
              </div>
             <br>
-            <a href="index.html">View more>></a>
+            <a href="index.html" style="text-align: center; display: block; text-decoration:none; color: black;">View more>></a>
         </div>
         <footer id="footer">
-            <a href="contact.html">Contact Us</a><br>
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
+            <a href="contact.html" style="position: absolute; left:0; margin:0 auto;top: 0; bottom: 0; text-decoration:none; color: black;">Contact Us</a><br>
+            <div style=" position: absolute; right: 10px; top: 10px; margin:0 auto;">
+                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
+            </div>
             <br>
-            &copy; 2020 ROOM SEARCH PVT LTD.
+            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
         </footer>
     </div>   
 </body>

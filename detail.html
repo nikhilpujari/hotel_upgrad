@@ -3,6 +3,7 @@
         Detail
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <style>
         body{
             width: 100%;
@@ -10,10 +11,19 @@
             position: relative;
             background-color: #e0e0e0;
             margin: 0;
+            font-family: 'Ubuntu', sans-serif;
         }
          #logo{
             width: 60px;
             height: 60px;
+        }
+        #login{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            margin:0 auto;
+            text-decoration:none;
+            color: black;
         }
         #img_detail{
             width: 500px;
@@ -26,19 +36,25 @@
         }
         #footer{
             background-color: rosybrown; 
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            
+        }
+        #copywrite{
+            font-size: 10px; 
+            display: block;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div>
-        <header style="background-color: rosybrown;">
+        <header style="background-color: rosybrown; position: fixed; width: 100%; top:0; z-index:1;">
             <a href="index.html"><img src="assests/images/logo.png" id="logo" alt="logo"/></a>
-            <a href="login.html">LOGIN</a>
+            <a href="login.html" id="login">LOGIN</a>
         </header>
-        <div style="padding-bottom: 3.5rem;">
+        <div style="padding-bottom: 3.5rem; padding-top: 3.5rem;">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="img_detail" alt="radison"/></a>
             <form action="payment.html" method="get" style="padding: 0% 4% 1% 4%;">
                 Adults:
@@ -70,12 +86,14 @@
             </div>
         </div>
         <footer id="footer">
-            <a href="contact.html">Contact Us</a><br>
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
+            <a href="contact.html" style="position: absolute; left: 10px; top: 10px; margin:0 auto; text-decoration:none; color: black;">Contact Us</a><br>
+            <div style="position: absolute; right: 10px; top: 10px; margin:0 auto;">
+                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
+            </div>
             <br>
-            &copy; 2020 ROOM SEARCH PVT LTD.
+            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
         </footer>
     </div>   
 </body>
