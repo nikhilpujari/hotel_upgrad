@@ -4,6 +4,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
     <style>
         body{
             width: 100%;
@@ -13,6 +14,14 @@
             margin: 0;
             font-family: 'Ubuntu', sans-serif;
         }
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rosybrown;
+            width: 100%;
+            position: fixed;
+        }  
          #logo{
             width: 60px;
             height: 60px;
@@ -26,66 +35,81 @@
             color: black;
         }
         #img_payment{
-            width: 500px;
-            height: 500px;
+            max-width: 300px;
+            max-height: 270px;
         }
         #hotel-info{
             background-color: rgb(132,136,139);
-            width: 50%; 
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10% 20% 5%;
         }
-        
+        #font-cursive{
+            font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+        }
+        #payment-detail{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rosybrown;
+            margin: 0% 2%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2%;
+        }
         #social{
             width: 22px;
             height: 20px;
         }
-        #footer{
-            background-color: rosybrown; 
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        #contact{
+            text-decoration:none;
+            color: black;
+            margin-left: 2%;
         }
         #copywrite{
-            font-size: 10px; 
-            display: block;
-            text-align: center;
+            font-size: 10px;
+            margin-right: 2%;
         }
     </style>
 </head>
 <body>
     <div>
-        <header style="background-color: rosybrown; margin-bottom: 2%; position: fixed; width: 100%; top:0; z-index:1;">
+        <header class="site-header">
             <a href="index.html"><img src="assests/images/logo.png" id="logo" alt="logo"/></a>
-            <a href="login.html" id="login">LOGIN</a>
+            <a href="login.html" id="login">Login</a>
         </header>
         <div style="padding-bottom: 3.5rem; padding-top: 3.5rem;">
             <div id="hotel-info">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="img_payment" alt="radison"/>
-                <h2>Radisson Blu Hotel</h2>
-                #38 of 1,289 hotels in New Delhi<br><br>
-                National Highway 8, New Delhi
+                <div>
+                    <h2>Radisson Blu Hotel</h2>
+                    #38 of 1,289 hotels in New Delhi<br><br>
+                    National Highway 8, New Delhi
+                </div>
             </div>
-            <div style="margin: 2%;">
-                <b>Name: </b>John Doe<br><br>
-                <b>Number of Adults:</b>2<br><br>
-                <b>Check-in Date: </b>06/06/2020<br><br>
-                <b>Check-out Date: </b>08/06/2020<br><br>
+            <div id="payment-detail">
+            <div>
+                <b id="font-cursive">Name: </b>John Doe<br><br>
+                <b id="font-cursive">Number of Adults:</b>2<br><br>
+                <b id="font-cursive">Check-in Date: </b>06/06/2020<br><br>
+                <b id="font-cursive">Check-out Date: </b>08/06/2020<br><br>
             </div>
-            <div style="margin:2%; border:1px solid black; border-radius: 5px; padding: 1% 2%;">
-                <b>Tariff Breakdown: </b> Rs.1000 x 2 Adults x 5 Nights<br><br>
-                <b>Total Amount: </b>Rs. 10000<br>
+            <div>
+                <b id="font-cursive">Tariff Breakdown: </b> Rs.1000 x 2 Adults x 5 Nights<br><br>
+                <b id="font-cursive">Total Amount: </b>Rs. 10000<br>
             </div>
-            <a href="payment.html">Pay Now</a><br><br>
+            <a href="payment.html">Pay Now</a>
+            </div>
         </div>
-        <footer id="footer">
-            <a href="contact.html" style="position: absolute; left: 10px; top: 10px; margin:0 auto; text-decoration:none; color: black;">Contact Us</a><br>
-            <div style="position: absolute; right: 10px; top: 10px; margin:0 auto;">
+        <footer class="site-header" style="bottom: 0; height: 7%;">
+            <a href="contact.html" id="contact">Contact Us</a>
+            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
+            <div style="margin-left: 0;  margin-right: 2%;">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
                 <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
             </div>
-            <br>
-            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
         </footer>
     </div>   
 </body>

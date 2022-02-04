@@ -13,6 +13,14 @@
             margin: 0;
             font-family: 'Ubuntu', sans-serif;
         }
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rosybrown;
+            width: 100%;
+            position: fixed;
+        }  
          #logo{
             width: 60px;
             height: 60px;
@@ -36,7 +44,7 @@
             transform: translate(-50%, -50%);
         }
         .list-div{
-            background-color: rgb(132,136,139);
+            background-color: lightgrey;
             margin: 2%;
             width:100%;
         }
@@ -52,29 +60,26 @@
         #map-view{
             display: none;
         }
+        #contact{
+            text-decoration:none;
+            color: black;
+            margin-left: 2%;
+        }
         #social{
             width: 22px;
             height: 20px;
         }
-        #footer{
-            background-color: rosybrown; 
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            
-        }
         #copywrite{
-            font-size: 10px; 
-            display: block;
-            text-align: center;
+            font-size: 10px;
+            margin-right: 2%;
         }
     </style>
 </head>
 <body>
     <div>
-        <header style="background-color: rosybrown; position: fixed; width: 100%; top:0; z-index:1;">
+        <header class="site-header">
             <a href="index.html"><img src="assests/images/logo.png" id="logo" alt="logo"/></a>
-            <a href="login.html" id="login">LOGIN</a>
+            <a href="login.html" id="login">Login</a>
         </header>
         <div style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
             <ul id="ul-list">
@@ -106,15 +111,15 @@
             </div>  
             </div>          
         </div>
-        <footer id="footer">
-            <a href="contact.html" style="position: absolute; left: 10px; top: 10px; margin:0 auto; text-decoration:none; color: black;">Contact Us</a><br>
-            <div style="position: absolute; right: 10px; top: 10px; margin:0 auto;">
+        <footer class="site-header" style="bottom: 0; height: 7%;">
+            <a href="contact.html" id="contact">Contact Us</a>
+            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
+            <div style="margin-left: 0;  margin-right: 2%;">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
                 <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
             </div>
-            <br>
-            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
+            
         </footer>
     </div>   
 </body>

@@ -13,6 +13,20 @@
             margin: 0;
             font-family: 'Ubuntu', sans-serif;
         }
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rosybrown;
+            width: 100%;
+            position: fixed;
+        }  
+        #form-data{
+            display: flex; 
+            flex-direction: column; 
+            flex-direction: row; 
+            justify-content: space-between;
+        }
          #logo{
             width: 60px;
             height: 60px;
@@ -25,53 +39,73 @@
             text-decoration:none;
             color: black;
         }
+        #font-cursive{
+            font-family: 'Comic Sans MS', 'Comic Sans', 'cursive';
+        }
         #img_detail{
             width: 500px;
-            height: 500px;
+            height: 350px;
             padding: 2% 4% 0% 4%;
+        }
+        #contact{
+            text-decoration:none;
+            color: black;
+            margin-left: 2%;
         }
         #social{
             width: 22px;
             height: 20px;
         }
-        #footer{
-            background-color: rosybrown; 
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            
-        }
         #copywrite{
-            font-size: 10px; 
-            display: block;
-            text-align: center;
+            font-size: 10px;
+            margin-right: 2%;
         }
     </style>
 </head>
 <body>
     <div>
-        <header style="background-color: rosybrown; position: fixed; width: 100%; top:0; z-index:1;">
+        <header class="site-header">
             <a href="index.html"><img src="assests/images/logo.png" id="logo" alt="logo"/></a>
             <a href="login.html" id="login">LOGIN</a>
         </header>
-        <div style="padding-bottom: 3.5rem; padding-top: 3.5rem;">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="img_detail" alt="radison"/></a>
+        <div style="padding-bottom: 4 rem; padding-top: 3.5rem;">
+            <div style="display: flex; align-items: center; border: 1px solid black;  height: 400px; justify-content: space-around; flex: 2 1;">
+            <div>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="img_detail" alt="radison"/></a>
+            </div>
             <form action="payment.html" method="get" style="padding: 0% 4% 1% 4%;">
-                Adults:
-                <input type="number" name="adults" min="1" autocomplete="off" required><br>
-                Name:
-                <input type="text" name="name" autocomplete="off" required><br>
-                From Date:
-                <input type="date" name="from" autocomplete="off" required><br>
-                To Date:
-                <input type="date" name="to" autocomplete="off" required><br>
-                Total:
-                <input type="number" name="total" disabled><br>
-                <input type="submit" value="Book Now">
+                    <div id="form-data">
+                        Adults:
+                        <input type="number" name="adults" min="1" autocomplete="off" style="width: 60%">
+                    </div>
+                    <div id="form-data">
+                        Name:
+                        <input type="text" name="name" autocomplete="off" required style="width: 60%">
+                    </div>
+                    <div id="form-data">
+                        From Date:
+                        <input type="date" name="from" autocomplete="off" required style="width: 60%">
+                    </div>
+                    <div id="form-data">
+                        To Date:
+                        <input type="date" name="to" autocomplete="off" required style="width: 60%">
+                    </div>
+                    <div id="form-data">
+                        Total:
+                        <input type="number" name="total" style="width: 60%" disabled>
+                    </div>
+                    <div style="display: flex; 
+                    flex-direction: column; 
+                    flex-direction: row; 
+                    ;">
+                        <input type="submit" value="Book Now">
+                    </div>
+                </ul>
             </form>
-            <div style="padding: 1% 4% 2% 4%;">
+        </div>
+            <div style="padding: 1% 4% 2% 4%; padding-bottom: 4em;">
                 <h2>Radisson Blu Hotel</h2>
-                RATING<br><br>
+                <h5 id="font-cursive">RATING</h5>
                 5 Star<br><br>
                 AMENITIES
                 <ul>
@@ -81,19 +115,18 @@
                     <li>Fitness center</li>
                     <li>Pool</li>
                 </ul>
-                <h5>DESCRIPTION</h5>
+                <h5 id="font-cursive">DESCRIPTION</h5>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
             </div>
         </div>
-        <footer id="footer">
-            <a href="contact.html" style="position: absolute; left: 10px; top: 10px; margin:0 auto; text-decoration:none; color: black;">Contact Us</a><br>
-            <div style="position: absolute; right: 10px; top: 10px; margin:0 auto;">
+        <footer class="site-header" style="bottom: 0; height: 7%;">
+            <a href="contact.html" id="contact">Contact Us</a>
+            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
+            <div style="margin-left: 0;  margin-right: 2%;">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" id="social" alt="facebook"/></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" id="social" alt="instagram"/></a>
                 <a href="https://www.twitter.com" target="_blank"><img src="assests/images/twitter.png" id="social" alt="twitter"/></a>
             </div>
-            <br>
-            <label id="copywrite">&copy; 2020 ROOM SEARCH PVT LTD.</label>
         </footer>
     </div>   
 </body>
